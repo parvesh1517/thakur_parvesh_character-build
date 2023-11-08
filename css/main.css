@@ -1,0 +1,201 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* main header rules */
+
+header {
+    background-color:black;
+    padding: 10px 0px;
+}
+
+#main-logo {
+    width: 400px;
+    display: block;
+    margin: 0px auto;
+}
+
+#character_nav {
+    background-color: #675050;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.characters {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.characters li {
+    height: 220px;
+    margin: 10px 8px;
+    background-color: rgb(236, 236, 212);
+    text-align: left;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 155px 0 0 rgb(2, 15, 0) inset;
+}
+
+.characters li:hover {
+    box-shadow: 0 220px 0 0 rgb(246, 240, 150) inset;
+}
+
+.characters li h5 {
+    color: rgb(17, 17, 17);
+    padding: 12px 8px;
+}
+
+.characters li a {
+    text-decoration: none;
+}
+
+article, #instructions {
+    padding: 20px;
+}
+
+article h3, #instructions {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+article p, #instructions {
+   width: 80%;
+   font-size: 18px;
+   line-height: 22px;
+   text-align: center;
+   margin: 0px auto;
+}
+
+
+/*---Sprite---*/
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    /*---Move image from img---*/
+    background-image: url('../images/spritesheet.png');
+}
+
+
+#undertaker {
+    background-position: -150px 0;
+}
+
+#Brock {
+    background-position: -300px 0;
+}
+
+#Kane {
+    background-position: -450px 0;
+}
+
+#Goldberg {
+    background-position: -600px 0;
+}
+
+#hhh {
+    background-position: -750px 0;
+}
+
+#john:hover, #undertaker:hover, #Brock:hover, #Kane:hover, #Goldberg:hover, #hhh:hover {
+    background-position-y: -150px;
+}
+
+/*---Footer rules---*/
+
+footer {
+    color:aliceblue;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.stickyfooter{
+    position: sticky;
+    top: 100%;
+    height: 80px;
+    background-color:  rgb(240, 234, 234);
+}
+
+.lightbox{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.85);
+    background-image: url(../images/cena2.jpg);
+    background-repeat: no-repeat;
+    background-size: 55vh;
+    background-position: 40px center;
+    z-index: 5000; /*this is crazy, better safe than sorry */ 
+    display: none;
+}
+
+#lightbox2{
+    background-image: url(../images/tker.jpg);
+
+}
+
+#lightbox3 {
+    background-image: url(../images/brock2.jpg);
+
+}
+
+#lightbox4 {
+    background-image: url(../images/kane2.jpg);
+
+}
+
+
+
+.lightbox_close {
+    position: relative;
+    top: 20px;
+    left: 95%;
+    color: white;
+    font-size: 48px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.lightbox_close:hover {
+    opacity: 0.5;
+    color: red;
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 50px;
+}
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    margin-left: 0;
+    padding-top: 32px;
+    line-height: 1.6 !important;
+}
+
+.lightbox:target {
+    display: block;
+}
